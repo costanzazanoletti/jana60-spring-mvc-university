@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>	
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Departments</title>
+	</head>
+	<body>
+		<h1>Departments</h1>
+		<!--  
+		<ul>
+			<li th:each="dep : ${departmentList}" th:text="${dep.getName()}"></li>
+		</ul>
+		-->
+		
+		<table>
+			<thead>
+				<tr>
+					<th>name</th>
+					<th>address</th>
+					<th>phone</th>
+					<th>email</th>
+					<th>website</th>
+					<th>head of department</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="dep : ${departmentList}">
+					<td th:text="${dep.getName()}"></td>
+					<td th:text="${dep.address}"></td>
+					<td th:text="${dep.phone}"></td>
+					<td th:text="${dep.email}"></td>
+					<td th:text="${dep.website}"></td>
+					<td th:text="${dep.headOfDepartment}"></td>
+				</tr>
+				
+			</tbody>
+		</table>
+	</body>
+</html>

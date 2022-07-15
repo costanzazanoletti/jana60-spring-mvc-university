@@ -21,7 +21,8 @@ public class DepartmentController {
     // for (Department d : list) {
     // System.out.println(d.getId() + " - " + d.getName());
     // }
-    model.addAttribute("departmentList", repo.findAll());
+    // model.addAttribute("departmentList", repo.findAll());
+    model.addAttribute("departmentList", repo.findAllByOrderByNameDesc());
     return "departments";
   }
 }
